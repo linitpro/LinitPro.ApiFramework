@@ -1,8 +1,9 @@
-﻿using LinitPro.CommonTools.Extensions;
+﻿using System;
+using LinitPro.CommonTools.Extensions;
 
 namespace LinitPro.ApiFramework.Exception
 {
-    public abstract class AbstractApiException<TResultCode>: System.Exception
+    public abstract class AbstractApiException<TResultCode>: System.Exception where TResultCode: Enum
     {
         protected AbstractApiException(TResultCode resultCode)
         {
